@@ -1,6 +1,5 @@
 import socket
 import sys
-from re import A
 
 
 class Assignment2:
@@ -11,9 +10,16 @@ class Assignment2:
         print("Your age is " + str(currentYear - self.year))
     
     def listAnniversaries(self):
-        a = Assignment2(2022)
-        ret = a.listAnniversaries()
-        return ret
+        temp = 10
+        n = 2022 - 2022 % 10
+
+        a = []
+        while (n > self.year):
+            a.append(temp)
+            n = n - 10
+            temp = temp + 10
+
+        return a
 
     def modifyYear(self, n):
         num = n
