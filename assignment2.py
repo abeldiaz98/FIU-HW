@@ -8,8 +8,7 @@ class Assignment2:
         self.year = year
         
     def tellAge(self, currentYear):
-        age = currentYear - self.year
-        print("Your age is %d", age)
+        print("Your age is " + str(currentYear - self.year))
     
     def listAnniversaries(self):
         a = Assignment2(2022)
@@ -59,4 +58,3 @@ class Assignment2:
             return True
         except socket.error:
             return False
-   
