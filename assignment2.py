@@ -22,16 +22,10 @@ class Assignment2:
         return a
 
     def modifyYear(self, n):
-        num = n
-        res = str(self.year)[:2] * n
-        arr = str(num)
-        for i in range(n):
-            res += arr[:2]
-        num = num*n
-        lst = str(num)
-        arr1 = lst[::2]
-        res += arr1
-        return res
+        ans = str(self.year)[:2] * n
+        s = self.year * n
+        ans = ans + str(s)[::2]
+        return ans
 
     def checkGoodString(string):
         if len(string) < 9:
