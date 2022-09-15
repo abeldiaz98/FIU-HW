@@ -14,9 +14,9 @@ class Assignment2:
         test = currentYear - self.year
         a = []
         if test > 2:
-            a = [10, 20]
-        else:
             a = [10]
+        else:
+            a = [10, 20]
         return a
 
     def modifyYear(self, n):
