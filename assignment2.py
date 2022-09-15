@@ -11,19 +11,19 @@ class Assignment2:
     
     def listAnniversaries(self):
         temp = 10
-        n = 2022 - 2022 % 10
-
+        year = 2022
+        year = year - year % 10
         a = []
-        while (n > self.year):
+        while (year > self.year):
             a.append(temp)
-            n = n - 10
+            year = year - 10
             temp = temp + 10
 
         return a
 
     def modifyYear(self, n):
         num = n
-        res = ""
+        res = str(self.year)[:2] * n
         arr = str(num)
         for i in range(n):
             res += arr[:2]
@@ -64,5 +64,4 @@ class Assignment2:
             return True
         except socket.error:
             return False
-
 
