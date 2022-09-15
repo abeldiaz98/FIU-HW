@@ -34,15 +34,15 @@ class Assignment2:
         if string[0].islower() == False:
             return False
         
-        _num_count = 0
+        digitCounter = 0
         for i in string:
             if i.isdigit():
-                _num_count += 1
+                digitCounter += 1
             
-            if _num_count > 1:
+            if digitCounter > 1:
                 return False
         
-        return False
+        return True
 
     def connectTcp(AF_INET, SOCK_STREAM):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -59,3 +59,5 @@ class Assignment2:
         except socket.error:
             return False
 
+ret = Assignment2.checkGoodString("f0more")
+print(ret)
