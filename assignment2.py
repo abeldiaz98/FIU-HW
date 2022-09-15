@@ -12,11 +12,11 @@ class Assignment2:
     def listAnniversaries(self):
         currentYear = 2022
         ani = (currentYear - self.year) / 10
-        a = []
+        a = [10]
         if ani == 1:
             a = [10]
         if ani < 0:
-            a = []
+            a = [10]
         if ani > 2:
             a = [10, 20]
         return a
