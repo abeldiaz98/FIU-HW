@@ -27,7 +27,7 @@ class Assignment2:
         ans = ans + str(s)[::2]
         return ans
 
-    def checkGoodString(string):
+    def checkGoodString(string:str):
         if len(string) < 9:
             return False
         
@@ -59,5 +59,5 @@ class Assignment2:
         except socket.error:
             return False
 
-ret = Assignment2.checkGoodString("f0more")
+ret = Assignment2.checkGoodString("a1aaaaaaa")
 print(ret)
