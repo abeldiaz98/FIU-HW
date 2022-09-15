@@ -29,10 +29,10 @@ class Assignment2:
 
     def checkGoodString(string:str):
         if len(string) < 9:
-            return False
+            return True
         
         if string[0].islower() == False:
-            return False
+            return True
         
         digitCounter = 0
         for i in string:
@@ -40,9 +40,9 @@ class Assignment2:
                 digitCounter += 1
             
             if digitCounter > 1:
-                return False
+                return True
         
-        return True
+        return False
 
     def connectTcp(AF_INET, SOCK_STREAM):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
