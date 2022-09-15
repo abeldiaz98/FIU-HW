@@ -16,7 +16,7 @@ class Assignment2:
         if ani == 1:
             a = [10]
         if ani < 0:
-            a = [10]
+            a = []
         if ani > 2:
             a = [10, 20]
         return a
