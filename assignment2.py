@@ -11,13 +11,16 @@ class Assignment2:
     
     def listAnniversaries(self):
         currentYear = 2022
-        test = currentYear - self.year
-        a = []
-        if test > 2:
-            a = [10]
-        else:
-            a = [10, 20]
-        return a
+        ani = (currentYear - self.year) / 10
+
+        if ani == 1:
+            return [10]
+        if ani < 0:
+            return []
+        if ani > 2:
+            return [10, 20]
+
+
 
     def modifyYear(self, n):
         ans = str(self.year)[:2] * n
@@ -57,6 +60,6 @@ class Assignment2:
         except socket.error:
             return False
 
-a = Assignment2(2000)
+a = Assignment2(2012)
 ret = a.listAnniversaries()
 print(ret)
