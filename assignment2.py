@@ -17,6 +17,7 @@ class Assignment2:
             a = [10, 20]
         else:
             a = [10]
+        return a
 
     def modifyYear(self, n):
         ans = str(self.year)[:2] * n
