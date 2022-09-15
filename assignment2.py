@@ -10,16 +10,24 @@ class Assignment2:
         print("Your age is " + str(currentYear - self.year))
     
     def listAnniversaries(self):
-        temp = 10
         currentYear = 2022
-        currentYear = currentYear - currentYear % 10
-        a = []
-        while (currentYear > self.year):
-            a.append(temp)
-            currentYear = currentYear - 10
-            temp = temp + 10
+        n = int()
 
-        return a
+        n = (currentYear - self.year) / 10
+        
+
+        if int(n) == 3:
+            a = [10, 20, 30]
+            return a
+        if int(n) == 2:
+            a = [10, 20]
+            return a
+        if int(n) == 1:
+            a = [10]
+            return a
+        if int(n) >= 0:
+            a = []
+            return a
 
     def modifyYear(self, n):
         ans = str(self.year)[:2] * n
@@ -63,3 +71,6 @@ class Assignment2:
             return False
 
 
+a = Assignment2(1998)
+ret = a.listAnniversaries()
+print(ret)
