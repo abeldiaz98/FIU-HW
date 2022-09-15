@@ -14,12 +14,12 @@ class Assignment2:
         ani = (currentYear - self.year) / 10
 
         if ani == 1:
-            return [10]
+            a = [10]
         if ani < 0:
-            return []
+            a = []
         if ani > 2:
-            return [10, 20]
-
+            a = [10, 20]
+        return a
 
 
     def modifyYear(self, n):
