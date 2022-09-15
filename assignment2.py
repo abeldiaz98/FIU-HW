@@ -9,7 +9,7 @@ class Assignment2:
         
     def tellAge(self, currentYear):
         age = currentYear - self.year
-        print("Your age is " + age)
+        print("Your age is %d", age)
     
     def listAnniversaries(self):
         a = Assignment2(2022)
@@ -43,7 +43,7 @@ class Assignment2:
             if _num_count > 1:
                 return False
         
-        return True
+        return False
 
     def connectTcp(AF_INET, SOCK_STREAM):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
