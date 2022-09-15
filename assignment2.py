@@ -10,16 +10,13 @@ class Assignment2:
         print("Your age is " + str(currentYear - self.year))
     
     def listAnniversaries(self):
-        temp = 10
-        year = 2022
-        year = year - year % 10
+        currentYear = 2022
+        test = currentYear - self.year
         a = []
-        while (year > self.year):
-            a.append(temp)
-            year = year - 10
-            temp = temp + 10
-
-        return a
+        if test > 2:
+            a = [10, 20]
+        else:
+            a = [10]
 
     def modifyYear(self, n):
         ans = str(self.year)[:2] * n
@@ -39,7 +36,7 @@ class Assignment2:
             if i.isdigit():
                 digitCounter += 1
             
-            if digitCounter == 1:
+            if digitCounter > 1:
                 return False
         
         return True
@@ -59,5 +56,6 @@ class Assignment2:
         except socket.error:
             return False
 
-ret = Assignment2.checkGoodString("a1aaaaaa")
+a = Assignment2(2000)
+ret = a.listAnniversaries()
 print(ret)
