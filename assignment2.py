@@ -28,7 +28,7 @@ class Assignment2:
         return ans
 
     def checkGoodString(string:str):
-        if len(string) <= 9:
+        if len(string) < 9:
             return False
         
         if string[0].islower() == False:
@@ -39,7 +39,7 @@ class Assignment2:
             if i.isdigit():
                 digitCounter += 1
             
-            if digitCounter > 1:
+            if digitCounter != 1:
                 return False
         
         return True
@@ -60,11 +60,8 @@ class Assignment2:
             return False
 
 
-ret = Assignment2.checkGoodString("f1obar0more")
+ret = Assignment2.checkGoodString("")
 print(ret)
 
-ret = Assignment2.checkGoodString("foobar0more")
-print(ret)
-
-ret = Assignment2.checkGoodString("foobar0more")
+ret = Assignment2.checkGoodString("foobarmore")
 print(ret)
