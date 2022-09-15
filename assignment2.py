@@ -28,13 +28,21 @@ class Assignment2:
         return ans
 
     def checkGoodString(string:str):
-        if (len(string) < 9):
+        if len(string) < 9:
             return False
-        else:
-            if (string[0].islower() and any(c.isdigit() for c in string)):
-                return True
-            else:
+        
+        if string[0].islower() == False:
+            return False
+        
+        digitCounter = 0
+        for i in string:
+            if i.isdigit():
+                digitCounter += 1
+            
+            if digitCounter == 1:
                 return False
+        
+        return True
 
     def connectTcp(AF_INET, SOCK_STREAM):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
