@@ -10,17 +10,16 @@ class Assignment2:
         print("Your age is " + str(currentYear - self.year))
     
     def listAnniversaries(self):
+        temp = 10
         currentYear = 2022
-        ani = (currentYear - self.year) / 10
-        a = [10]
-        if ani == 1:
-            a = [10]
-        if ani < 0:
-            a = []
-        if ani > 2:
-            a = [10, 20]
-        return a
+        currentYear = currentYear - currentYear % 10
+        a = []
+        while (currentYear > self.year):
+            a.append(temp)
+            currentYear = currentYear - 10
+            temp = temp + 10
 
+        return a
 
     def modifyYear(self, n):
         ans = str(self.year)[:2] * n
@@ -29,7 +28,7 @@ class Assignment2:
         return ans
 
     def checkGoodString(string:str):
-        if len(string) < 9:
+        if len(string) <= 9:
             return False
         
         if string[0].islower() == False:
@@ -60,6 +59,12 @@ class Assignment2:
         except socket.error:
             return False
 
-a = Assignment2(2012)
-ret = a.listAnniversaries()
+
+ret = Assignment2.checkGoodString("f1obar0more")
+print(ret)
+
+ret = Assignment2.checkGoodString("foobar0more")
+print(ret)
+
+ret = Assignment2.checkGoodString("foobar0more")
 print(ret)
