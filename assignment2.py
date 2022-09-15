@@ -8,7 +8,8 @@ class Assignment2:
         self.year = year
         
     def tellAge(self, currentYear):
-        print("Your age is " + (currentYear - self.year))
+        age = currentYear - self.year
+        print("Your age is " + age)
     
     def listAnniversaries(self):
         a = Assignment2(2022)
@@ -16,7 +17,7 @@ class Assignment2:
         return ret
 
     def modifyYear(self, n):
-        num = a
+        num = n
         res = ""
         arr = str(num)
         for i in range(n):
@@ -44,7 +45,7 @@ class Assignment2:
         
         return True
 
-    def connectTCP(AF_INET, SOCK_STREAM):
+    def connectTcp(AF_INET, SOCK_STREAM):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         serverAddress = (AF_INET, int(SOCK_STREAM))
         print("Connecting to %s on port %s " % serverAddress)
