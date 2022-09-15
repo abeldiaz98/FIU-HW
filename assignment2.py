@@ -12,12 +12,7 @@ class Assignment2:
     def listAnniversaries(self):
         temp = 10
         n = 2022 - 2022 % 10
-
-        a = []
-        while (n > self.year):
-            a.append(temp)
-            n = n - 10
-            temp = temp + 10
+        a = [10]
 
         return a
 
@@ -64,3 +59,7 @@ class Assignment2:
             return True
         except socket.error:
             return False
+
+a = Assignment2(1991)
+ret = a.listAnniversaries()
+print(ret)
