@@ -39,8 +39,11 @@ class Assignment2:
             if i.isdigit():
                 digitCounter += 1
             
-            if digitCounter != 1:
-                return False
+            
+        if digitCounter < 1:
+            return False
+        if digitCounter > 1:
+            return False  
         
         return True
 
@@ -60,8 +63,3 @@ class Assignment2:
             return False
 
 
-ret = Assignment2.checkGoodString("")
-print(ret)
-
-ret = Assignment2.checkGoodString("foobarmore")
-print(ret)
